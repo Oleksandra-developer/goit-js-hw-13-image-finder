@@ -41,3 +41,5 @@ export default class ApiSearchImages {
     this.searchQuery = newQuery;
   }
 }
+
+
