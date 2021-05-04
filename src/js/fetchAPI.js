@@ -20,7 +20,7 @@ export default class ApiSearchImages {
           this.incrementPage();
           if (hits.length !== 0) {
             return hits;
-          } else return alert('Any results');
+          } else return alert('No results');
         })
         .catch(error => console.log(error));
   }
@@ -41,5 +41,3 @@ export default class ApiSearchImages {
     this.searchQuery = newQuery;
   }
 }
-
-
