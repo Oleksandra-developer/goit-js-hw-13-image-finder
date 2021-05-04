@@ -61,7 +61,7 @@ input {
 .btn_loading:focus {
   background-color: rgb(201, 201, 58);
 }
-.btn_loading .is-hidden {
+.is-hidden {
   display: none;
 }
 .photo-card {

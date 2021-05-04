@@ -28,10 +28,7 @@ function onSearch(e) {
   ApiSearchImages.resetPage();
   clearResultContainer();
   fetchImages();
-  window.scrollTo({
-    top: 1300,
-    behavior: 'smooth',
-  });
+  scroll();
 }
 
 function fetchImages() {
@@ -40,17 +37,20 @@ function fetchImages() {
     .then(images => {
       appendImagesMarkup(images);
       loadMoreBtn.enable();
-      window.scrollBy({
-        top: 1300,
-        behavior: 'smooth',
-      });
+      scroll();
     })
     .catch(error => console.log(error));
 }
-
+function scroll() {
+  window.scrollBy({
+    top: 1300,
+    behavior: 'smooth',
+  });
+}
 function appendImagesMarkup(images) {
   refs.resultContainer.insertAdjacentHTML('beforeend', galleryTpl(images));
 }
+
 function clearResultContainer() {
   refs.resultContainer.innerHTML = '';
 }
